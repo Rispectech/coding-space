@@ -2,7 +2,7 @@ const colors = require("tailwindcss/colors")
 const defaultTheme = require("tailwindcss/defaultTheme")
 
 module.exports = {
-  purge: [],
+  purge: ["./index.html", "./src/**/*.{vue,js,ts,jsx,tsx}"],
   darkMode: false, // or 'media' or 'class'
   theme: {
     screens: {
@@ -31,9 +31,13 @@ module.exports = {
       gridTemplateColumns: {
         "layout-desktop": "200px 1fr",
         "layout-tablet": "55px 1fr",
+        "comment-layout": "auto 1fr auto",
       },
       gridTemplateRows: {
         "layout-desktop": "80px 1fr 80px",
+      },
+      width: {
+        "95/100": "95.66667%",
       },
     },
   },

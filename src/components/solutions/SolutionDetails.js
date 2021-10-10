@@ -8,6 +8,7 @@ import ConfirmationModal from "../smallComponents/ConfirmationModal"
 import { useAuth } from "../../context/AuthContext"
 import LottieAnimation from "../smallComponents/LottieAnimation"
 import rocketLoader from "../../assets/animated_illustrations/loader.json"
+import CommentSection from "../commentsection/commentsection"
 
 const SolutionDetails = (props) => {
   const id = props.match.params.id
@@ -64,6 +65,8 @@ const SolutionDetails = (props) => {
         github={docs[0].githubUrl}
         title={docs[0].title}
       />
+
+      <CommentSection />
     </div>
   )
 }
